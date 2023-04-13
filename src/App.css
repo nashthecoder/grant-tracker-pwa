@@ -27,6 +27,17 @@
   left: 0;
 }
 
+.form-control input {
+  width: 60%;
+  padding: 0.5rem;
+}
+
+.form-control textarea {
+  width: 60%;
+  padding: 0.5rem;
+}
+
+
 .footer {
   background-color: #46BCD4;
   position: fixed;
@@ -39,3 +50,6 @@
   padding: 0.3rem;
 }
 
+.footer p {
+  text-align: center;
+}
