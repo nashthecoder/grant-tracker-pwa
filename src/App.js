@@ -14,7 +14,7 @@ function App() {
     <>
     <Navbar />
       <Routes>
-        <Route path="cover" element={<Cover /> } />
+        <Route path="/" element={<Cover /> } />
         <Route path="financial" element={<Financial /> } />
         <Route path="narrative" element={<Narrative /> } />
         <Route path="submission" element={<Submission /> } />

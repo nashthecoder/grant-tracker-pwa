@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 
 function Narrative() {
     const [state, setState] = useState({
-        date: '',
         summary: '',
         completed: '',
         pending: '',
@@ -26,20 +25,23 @@ function Narrative() {
     return (
         <>
             <div className='title'>
-                <h1>Narrative</h1>
+                <h2>Narrative</h2>
             </div>
             <form>
                 <div className="form-control">
-                    <label htmlFor="">Date:</label>
+                    <div><label htmlFor="">Date:</label></div>
+                    <div>
                         <input
                             type="date"
                             name="date"
                             value={state.date}
                             onChange={handleInputChange}
                         />
+                    </div>
                 </div>
                 <div className="form-control">
-                    <label htmlFor="">Project Summary:</label>
+                    <div className="row"><label htmlFor="">Project Summary:</label></div>
+                    <div className="row">
                         <textarea
                             type="text"
                             name="summary"
@@ -47,9 +49,11 @@ function Narrative() {
                             value={state.summary}
                             onChange={handleInputChange}
                         />
+                    </div>
                 </div>
                 <div className="form-control">
-                    <label htmlFor="">Task Completed:</label>
+                    <div className="row"><label htmlFor="">Task Completed:</label></div>
+                    <div className="row">
                         <textarea
                             type="text"
                             name="completed"
@@ -57,9 +61,13 @@ function Narrative() {
                             value={state.completed}
                             onChange={handleInputChange}
                         />
+                    </div>
                 </div>
                 <div className="form-control">
-                    <label htmlFor="">Task Pending:</label>
+                    <div className="row">
+                        <label htmlFor="">Task Pending:</label>
+                    </div>
+                    <div className="row">
                         <textarea
                             type="text"
                             name="pending"
@@ -67,9 +75,13 @@ function Narrative() {
                             value={state.pending}
                             onChange={handleInputChange}
                         />
+                    </div>
                 </div>
                 <div className="form-control">
-                    <label htmlFor="">Task Delayed:</label>
+                    <div className="row">
+                        <label htmlFor="">Task Delayed:</label>
+                    </div>
+                    <div className="row">
                         <textarea
                             type="text"
                             name="delayed"
@@ -77,9 +89,13 @@ function Narrative() {
                             value={state.delayed}
                             onChange={handleInputChange}
                         />
+                    </div>
                 </div>
                 <div className="form-control">
-                    <label htmlFor="">Risks:</label>
+                    <div className="row">
+                        <label htmlFor="">Risks:</label>
+                    </div>
+                    <div className="row">
                         <textarea
                             type="text"
                             name="risks"
@@ -87,9 +103,13 @@ function Narrative() {
                             value={state.risks}
                             onChange={handleInputChange}
                         />
+                    </div>
                 </div>
                 <div className="form-control">
-                    <label htmlFor="">Issues:</label>
+                    <div className="row">
+                        <label htmlFor="">Issues:</label>
+                    </div>
+                    <div className="row">
                         <textarea
                             type="text"
                             name="issues"
@@ -97,10 +117,14 @@ function Narrative() {
                             value={state.issues}
                             onChange={handleInputChange}
                         />
+                    </div>
                 </div>
                 <div className="form-control">
-                    <button type="submit">Submit</button>
-                </div>s
+                    <div className="buttons">
+                        <button className='button-btn' type="submit">Back</button>
+                        <button className='button-btn' type="submit">Next</button>
+                    </div>
+                </div>
             </form>
         </>
     )

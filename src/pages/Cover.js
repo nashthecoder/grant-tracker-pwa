@@ -2,7 +2,12 @@ import React, { useState }from 'react'
 
 function Cover() {
     const [state, setState] = useState({
-        date: '',
+        organization: '',
+        region: '',
+        amount: '',
+        code:'',
+        city:'',
+        period:'',
     });
 
     const handleInputChange = (event) => {
@@ -21,38 +26,86 @@ function Cover() {
     return (
         <>
             <div className='title'>
-                <h1>Cover</h1>
+                <h2>Report Cover Page</h2>
             </div>
-            <form>
+            <form className="cover">
                 <div className="form-control">
-                    <label htmlFor="">Date:</label>
-                        <input
-                            type="text"
-                            name="date"
-                            value={state.date}
-                            onChange={handleInputChange}
-                        />
-                </div>
-                <div className="form-conrtol">
+                    <div className="row">
                         <label htmlFor="">Organisation Name:</label>
                     </div>
-                    <div className="form-conrtol">
-                        <label htmlFor="">Region</label>
+                    <div className="row">
+                        <input 
+                            type="text"
+                            name="organization"
+                            value={state.organization}
+                            onChange={handleInputChange}
+                        />
                     </div>
-                    <div className="form-conrtol">
-                        <label htmlFor="">Grant Amount</label>
-                    </div>
-                    <div className="form-conrtol">
-                        <label htmlFor="">Project Code</label>
-                    </div>
-                    <div className="form-conrtol">
-                        <label htmlFor="">City</label>
+                </div>
+                    <div className="form-control">
+                        <div className="row">
+                            <label htmlFor="">Region</label>
+                        </div>
+                        <div className="row">
+                            <input 
+                                type="text"
+                                name="region"
+                                value={state.region}
+                                onChange={handleInputChange}
+                            />
+                        </div>
                     </div>
                     <div className="form-control">
-                        <label htmlFor="">Grant Period</label>
+                        <div className="row">
+                            <label htmlFor="">Grant Amount</label>
+                        </div>
+                        <div className="row">
+                            <input 
+                                type="text"
+                                name="amount"
+                                value={state.amount}
+                                onChange={handleInputChange}
+                            />
+                        </div>
+                        
                     </div>
                     <div className="form-control">
-                        <button type="submit">Submit</button>
+                        <div className="row"><label htmlFor="">Project Code</label></div>
+                        <div className="row">
+                            <input 
+                                type="text"
+                                name="code"
+                                value={state.code}
+                                onChange={handleInputChange}
+                            />
+                        </div>
+                        
+                    </div>
+                    <div className="form-control">
+                        <div className="row"><label htmlFor="">City</label></div>
+                        <div className="row">
+                            <input 
+                                type="text"
+                                name="city"
+                                value={state.city}
+                                onChange={handleInputChange}
+                            />
+                        </div>
+                        
+                    </div>
+                    <div className="form-control">
+                        <div className="row"><label htmlFor="">Grant Period</label></div>
+                        <div className="row">
+                            <input 
+                                type="text"
+                                name="period"
+                                value={state.period}
+                                onChange={handleInputChange}
+                            />
+                        </div>
+                    </div>
+                    <div className="form-control">
+                        <button type="submit">Next</button>
                     </div>
             </form>
         </>
